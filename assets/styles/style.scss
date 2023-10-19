@@ -17,35 +17,49 @@ $color-clear: #F5F5F5;
 .grid {
   display: grid;
   grid-template-rows: 80px auto 80px;
-  height: 100vh;
+  grid-auto-columns: minmax(100px, 20%);
+  min-height: 100vh;
   
   grid-template-areas:
-  'nav nav nav nav'
-  'menu main main main'
-  'footer footer footer footer';
+  'hd hd hd hd hd'
+  'sd main main main main'
+  'ft ft ft ft ft';
 
   header {
-    @include gridArea(nav, $color-primary);
+    @include gridArea(hd, $color-primary);
   }
   menu {
-    @include gridArea(menu, $color-primary-sub);
+    @include gridArea(sd, $color-primary-sub);
   }
   main {
     @include gridArea(main, $color-clear);
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    justify-items: center;
     gap: 10px;
     padding: 10px;
 
     .card {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       background-color: #F99417;
-      &> * { width: 100%}
+      &> * { 
+        display: flex;
+        justify-content: center;
+      }
+      .card-header {
+        padding: 5px;
+      }
+      .card-body {
+        overflow: hidden;
+      }
+      .card-footer {
+        padding: 5px;
+      }
+      
     }
   }
   footer {
-    @include gridArea(footer, $color-primary);
+    @include gridArea(ft, $color-primary);
   }
 }
