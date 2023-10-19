@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.grid {
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  height: 100vh;
+  grid-template-areas: "nav nav nav nav" "menu main main main" "footer footer footer footer";
+}
+.grid header {
+  grid-area: nav;
+  background-color: #333;
+}
+.grid menu {
+  grid-area: menu;
+  background-color: #777;
+}
+.grid main {
+  grid-area: main;
+  background-color: #aaa;
+}
+.grid footer {
+  grid-area: footer;
+  background-color: #3388ff;
+}

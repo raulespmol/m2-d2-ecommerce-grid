@@ -3,3 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@mixin gridArea($area, $bg){
+  grid-area: $area;
+  background-color: $bg;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  height: 100vh;
+  
+  grid-template-areas:
+  'nav nav nav nav'
+  'menu main main main'
+  'footer footer footer footer';
+  
+  header {
+    @include gridArea(nav, #333);
+  }
+  menu {
+    @include gridArea(menu, #777);
+  }
+  main {
+    @include gridArea(main, #aaa);
+  }
+  footer {
+    @include gridArea(footer, #3388ff);
+  }
+}
