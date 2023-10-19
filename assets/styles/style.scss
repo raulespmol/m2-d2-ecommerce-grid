@@ -1,3 +1,8 @@
+$color-primary: #363062;
+$color-primary-sub: #4D4C7D;
+$color-secondary: #F99417;
+$color-clear: #F5F5F5;
+
 * {
   margin: 0;
   padding: 0;
@@ -18,17 +23,29 @@
   'nav nav nav nav'
   'menu main main main'
   'footer footer footer footer';
-  
+
   header {
-    @include gridArea(nav, #333);
+    @include gridArea(nav, $color-primary);
   }
   menu {
-    @include gridArea(menu, #777);
+    @include gridArea(menu, $color-primary-sub);
   }
   main {
-    @include gridArea(main, #aaa);
+    @include gridArea(main, $color-clear);
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #F99417;
+      &> * { width: 100%}
+    }
   }
   footer {
-    @include gridArea(footer, #3388ff);
+    @include gridArea(footer, $color-primary);
   }
 }
