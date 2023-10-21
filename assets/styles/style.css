@@ -19,6 +19,7 @@
   background-color: #FFF;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
 }
 .grid header .logo-container {
@@ -27,25 +28,42 @@
   gap: 10px;
 }
 .grid header .logo-container .logo {
-  height: 80px;
+  height: 70px;
 }
 .grid header .logo-container h1 {
   color: #701000;
   font-size: 50px;
 }
+.grid header .bag img {
+  height: 60px;
+}
+.grid header .bag img:hover {
+  cursor: pointer;
+}
 .grid menu {
   grid-area: sd;
   background-color: #618734;
 }
+.grid menu .categorias {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.grid menu .categorias ul {
+  list-style-type: none;
+}
 .grid main {
   grid-area: main;
-  background-color: #a9b48a;
+  background-color: #cfd6bb;
   display: grid;
-  grid-template: repeat(4, 500px)/repeat(3, minmax(270px, 1fr));
-  justify-items: stretch;
-  align-items: stretch;
-  gap: 20px;
-  padding: 20px;
+  grid-template: repeat(3, 400px)/repeat(4, minmax(250px, 1fr));
+  /* justify-items: stretch;
+  align-items: stretch; */
+  gap: 1rem;
+  padding: 1rem;
 }
 .grid main .card {
   display: flex;
@@ -69,18 +87,25 @@
   height: 100%;
 }
 .grid main .card .card-body img {
-  width: 250px;
+  width: 220px;
   filter: saturate(0);
 }
 .grid main .card .card-body img:hover {
   transform: scale(1.1);
   filter: saturate(1);
+  cursor: pointer;
 }
 .grid main .card .card-footer {
   background-color: #b5d02d;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.grid main .card .card-footer .precio {
+  height: 25px;
 }
 .grid footer {
   grid-area: ft;
-  background-color: #701000;
+  background-color: #97a54f;
 }

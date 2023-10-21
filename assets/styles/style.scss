@@ -4,12 +4,12 @@
 $color-primary:#618734;
 $color-primary-sub: #97a54f;
 $color-secondary: #b5d02d;
-$color-secondary-sub: #a9b48a;
+$color-secondary-sub: #cfd6bb;
 $color-dark: #701000;
 $color-clear: #F5F5F5;
 
 //Tamaños
-$grid-gap: 20px;
+$grid-gap: 1rem;
 
 //Generales
 
@@ -41,29 +41,49 @@ $grid-gap: 20px;
     @include gridArea(hd, #FFF);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
     .logo-container {
       display: flex;
       align-items: baseline;
       gap: 10px;
       .logo {
-        height: 80px;
+        height: 70px;
       }
       h1 { 
         color: $color-dark;
         font-size: 50px
       }
-    };
+    }
+    .bag {
+      img {
+        height: 60px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
   }
   menu {
     @include gridArea(sd, $color-primary);
+    .categorias {
+      position: sticky;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      ul {
+        list-style-type: none;
+      }
+    }
   }
   main {
     @include gridArea(main, $color-secondary-sub);
     display: grid;
-    grid-template: repeat(4, 500px) / repeat(3, minmax(270px, 1fr));
-    justify-items: stretch;
-    align-items: stretch;
+    grid-template: repeat(3, 400px) / repeat(4, minmax(250px, 1fr));
+    /* justify-items: stretch;
+    align-items: stretch; */
     gap: $grid-gap;
     padding: $grid-gap;
 
@@ -87,22 +107,29 @@ $grid-gap: 20px;
         overflow: hidden;
         height: 100%;
         img {
-          width: 250px;
+          width: 220px;
           filter: saturate(0);
           &:hover{
             transform: scale(1.1);
             filter: saturate(1);
+            cursor: pointer;
           }
         }
       }
       .card-footer {
         background-color: $color-secondary;
         padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .precio {
+          height: 25px
+        }
       }
       
     }
   }
   footer {
-    @include gridArea(ft, $color-dark);
+    @include gridArea(ft, $color-primary-sub);
   }
 }
