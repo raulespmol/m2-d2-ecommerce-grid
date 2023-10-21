@@ -41,7 +41,7 @@
   grid-area: main;
   background-color: #a9b48a;
   display: grid;
-  grid-template: repeat(2, 500px)/repeat(3, minmax(270px, 1fr));
+  grid-template: repeat(4, 500px)/repeat(3, minmax(270px, 1fr));
   justify-items: stretch;
   align-items: stretch;
   gap: 20px;
@@ -50,30 +50,34 @@
 .grid main .card {
   display: flex;
   flex-direction: column;
-  background-color: #b5d02d;
+  color: white;
 }
 .grid main .card > * {
   display: flex;
   justify-content: center;
 }
 .grid main .card .card-header {
+  background-color: #701000;
   padding: 5px;
 }
 .grid main .card .card-body {
+  background-color: #97a54f;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  height: 100%;
 }
 .grid main .card .card-body img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
+  width: 250px;
+  filter: saturate(0);
 }
 .grid main .card .card-body img:hover {
   transform: scale(1.1);
+  filter: saturate(1);
 }
 .grid main .card .card-footer {
+  background-color: #b5d02d;
   padding: 5px;
 }
 .grid footer {

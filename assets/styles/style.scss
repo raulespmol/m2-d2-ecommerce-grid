@@ -61,7 +61,7 @@ $grid-gap: 20px;
   main {
     @include gridArea(main, $color-secondary-sub);
     display: grid;
-    grid-template: repeat(2, 500px) / repeat(3, minmax(270px, 1fr));
+    grid-template: repeat(4, 500px) / repeat(3, minmax(270px, 1fr));
     justify-items: stretch;
     align-items: stretch;
     gap: $grid-gap;
@@ -69,29 +69,34 @@ $grid-gap: 20px;
 
     .card {
       display: flex;
-      flex-direction: column;
-      background-color: $color-secondary;
+      flex-direction: column;;
+      color: white;
       &> * { 
         display: flex;
         justify-content: center;
       }
       .card-header {
+        background-color: $color-dark;
         padding: 5px;
       }
       .card-body {
+        background-color: $color-primary-sub;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        height: 100%;
         img {
-          object-fit: cover;
-          height: 100%;
-        }
-        img:hover{
-          transform: scale(1.1);
+          width: 250px;
+          filter: saturate(0);
+          &:hover{
+            transform: scale(1.1);
+            filter: saturate(1);
+          }
         }
       }
       .card-footer {
+        background-color: $color-secondary;
         padding: 5px;
       }
       
