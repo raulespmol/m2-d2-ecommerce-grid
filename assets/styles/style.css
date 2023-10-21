@@ -1,28 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
   transition: all 300ms ease;
 }
 
 .grid {
   display: grid;
-  grid-template-rows: 80px auto 80px;
+  grid-template-rows: auto auto 80px;
   grid-template-columns: 300px repeat(4, 1fr);
   min-height: 100vh;
   grid-template-areas: "hd hd hd hd hd" "sd main main main main" "ft ft ft ft ft";
 }
 .grid header {
   grid-area: hd;
-  background-color: #363062;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.grid header .logo-container {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.grid header .logo-container .logo {
+  height: 80px;
+}
+.grid header .logo-container h1 {
+  color: #701000;
+  font-size: 50px;
 }
 .grid menu {
   grid-area: sd;
-  background-color: #4D4C7D;
+  background-color: #618734;
 }
 .grid main {
   grid-area: main;
-  background-color: #F5F5F5;
+  background-color: #a9b48a;
   display: grid;
   grid-template: repeat(2, 500px)/repeat(3, minmax(270px, 1fr));
   justify-items: stretch;
@@ -33,7 +50,7 @@
 .grid main .card {
   display: flex;
   flex-direction: column;
-  background-color: #F99417;
+  background-color: #b5d02d;
 }
 .grid main .card > * {
   display: flex;
@@ -43,7 +60,15 @@
   padding: 5px;
 }
 .grid main .card .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+}
+.grid main .card .card-body img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 .grid main .card .card-body img:hover {
   transform: scale(1.1);
@@ -53,5 +78,5 @@
 }
 .grid footer {
   grid-area: ft;
-  background-color: #363062;
+  background-color: #701000;
 }

@@ -1,14 +1,23 @@
-$color-primary: #363062;
-$color-primary-sub: #4D4C7D;
-$color-secondary: #F99417;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+//Colores
+$color-primary:#618734;
+$color-primary-sub: #97a54f;
+$color-secondary: #b5d02d;
+$color-secondary-sub: #a9b48a;
+$color-dark: #701000;
 $color-clear: #F5F5F5;
 
-$g: 20px;
+//Tamaños
+$grid-gap: 20px;
+
+//Generales
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
   transition: all 300ms ease;
 }
 
@@ -19,7 +28,7 @@ $g: 20px;
 
 .grid {
   display: grid;
-  grid-template-rows: 80px auto 80px;
+  grid-template-rows: auto auto 80px;
   grid-template-columns: 300px repeat(4, 1fr);
   min-height: 100vh;
   
@@ -29,24 +38,39 @@ $g: 20px;
   'ft ft ft ft ft';
 
   header {
-    @include gridArea(hd, $color-primary);
+    @include gridArea(hd, #FFF);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    .logo-container {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      .logo {
+        height: 80px;
+      }
+      h1 { 
+        color: $color-dark;
+        font-size: 50px
+      }
+    };
   }
   menu {
-    @include gridArea(sd, $color-primary-sub);
+    @include gridArea(sd, $color-primary);
   }
   main {
-    @include gridArea(main, $color-clear);
+    @include gridArea(main, $color-secondary-sub);
     display: grid;
     grid-template: repeat(2, 500px) / repeat(3, minmax(270px, 1fr));
     justify-items: stretch;
     align-items: stretch;
-    gap: $g;
-    padding: $g;
+    gap: $grid-gap;
+    padding: $grid-gap;
 
     .card {
       display: flex;
       flex-direction: column;
-      background-color: #F99417;
+      background-color: $color-secondary;
       &> * { 
         display: flex;
         justify-content: center;
@@ -55,7 +79,14 @@ $g: 20px;
         padding: 5px;
       }
       .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
         img:hover{
           transform: scale(1.1);
         }
@@ -67,6 +98,6 @@ $g: 20px;
     }
   }
   footer {
-    @include gridArea(ft, $color-primary);
+    @include gridArea(ft, $color-dark);
   }
 }
