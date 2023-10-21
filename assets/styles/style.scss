@@ -64,15 +64,21 @@ $grid-gap: 1rem;
       }
     }
   }
+
   menu {
     @include gridArea(sd, $color-primary);
-    .categorias {
+    .filtros {
       position: sticky;
       top: 0;
       left: 0;
       display: flex;
       flex-direction: column;
       padding: 1rem;
+      gap: 1rem;
+      color: #FFF;
+      h3, h4 {
+        color: #390a00;
+      }
       ul {
         list-style-type: none;
       }
