@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 300ms ease;
 }
 
 .grid {
@@ -43,6 +44,9 @@
 }
 .grid main .card .card-body {
   overflow: hidden;
+}
+.grid main .card .card-body img:hover {
+  transform: scale(1.1);
 }
 .grid main .card .card-footer {
   padding: 5px;

@@ -9,6 +9,7 @@ $g: 20px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 300ms ease;
 }
 
 @mixin gridArea($area, $bg){
@@ -55,6 +56,9 @@ $g: 20px;
       }
       .card-body {
         overflow: hidden;
+        img:hover{
+          transform: scale(1.1);
+        }
       }
       .card-footer {
         padding: 5px;
