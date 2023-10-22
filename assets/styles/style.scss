@@ -112,6 +112,17 @@ $grid-gap: 1rem;
         align-items: center;
         gap: 5px;
       }
+      a {
+        color: #FFF;
+        text-decoration: none;
+        background-color: $color-primary-sub;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+        &:hover {
+          background-color: $color-secondary;
+        }
+      }
     }
   }
 

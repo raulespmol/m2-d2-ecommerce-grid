@@ -90,6 +90,17 @@
   align-items: center;
   gap: 5px;
 }
+.grid menu .filtros a {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #97a54f;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+.grid menu .filtros a:hover {
+  background-color: #b5d02d;
+}
 .grid main {
   grid-area: main;
   background-color: #cfd6bb;
