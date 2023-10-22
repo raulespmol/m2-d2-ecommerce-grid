@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./assets/styles/style.css">
   <title>Document</title>
 </head>
@@ -15,31 +16,58 @@
       </div>
       <div class="bag">
         <img src="./assets/vector/bag.svg" alt="">
+        <div class="circle">
+          <span>2</span>
+        </div>
       </div>
     </header>
+
     <menu>
       <div class="filtros">
         <h3>Filtros</h3>
         <div class="categorias">
           <h4>Categorías</h4>
           <ul>
-            <li><input type="checkbox" name="" id="">Combate (7)</li>
-            <li><input type="checkbox" name="" id="">Túnicas (3)</li>
-            <li><input type="checkbox" name="" id="">Pociones (4)</li>
-            <li><input type="checkbox" name="" id="">Utilidades (5)</li>
+            <li>
+              <input type="checkbox" name="" id="a">
+              <label for="a">Combate (7)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="b">
+              <label for="b">Túnicas (3)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="c">
+              <label for="c">Pociones (4)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="d">
+              <label for="d">Utilidades (5)</label>
+            </li>
           </ul>
           <h4>Razas</h4>
           <ul>
-            <li><input type="checkbox" name="" id="">Kokiri (4)</li>
-            <li><input type="checkbox" name="" id="">Goron (3)</li>
-            <li><input type="checkbox" name="" id="">Zora (4)</li>
+            <li>
+              <input type="checkbox" name="" id="e">
+              <label for="e"> Kokiri (4)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="f">
+              <label for="f"> Goron (3)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="g">
+              <label for="g"> Zora (4)</label>
+            </li>
           </ul>
         </div>
+        <h4>Precio máximo</h4>
         <div class="precio-max">
-          <h4>Precio máximo</h4>
-          <span>10</span>
-          <input type="range" name="" id="price" min="10" max="1000">
-          <span>1000</span>
+          <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+          <span>25</span>
+          <input type="range" name="" id="price" min="10" max="1000" value="1000">
+          <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+          <span>999</span>
         </div>
         <div class="ordenar">
           <h3>Ordenar por</h3>
@@ -56,164 +84,215 @@
     <main>
 
       <div class="card">
-        <div class="card-header">
-          Escudo Deku
-        </div>
         <div class="card-body">
           <img src="./assets/img/deku-shield.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>25</span>
+        <div class="card-desc">
+          <h5>Escudo Deku</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>25</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Espada Kokiri
-        </div>
         <div class="card-body">
           <img src="./assets/img/kokiri-sword.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>50</span>
+        <div class="card-desc">
+          <h5>Espada Kokiri</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>50</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Bomba
-        </div>
         <div class="card-body">
           <img src="./assets/img/bomb.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>15</span>
+        <div class="card-desc">
+          <h5>Bomba</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>15</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Ocarina del Tiempo
-        </div>
         <div class="card-body">
           <img src="./assets/img/ocarina.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>999</span>
+        <div class="card-desc">
+          <h5>Ocarina del tiempo</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>999</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Escudo Hylian
-        </div>
         <div class="card-body">
           <img src="./assets/img/hylian-shield.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>100</span>
+        <div class="card-desc">
+          <h5>Escudo Hylian</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Túnica Kokiri
-        </div>
         <div class="card-body">
           <img src="./assets/img/tunic-kokiri.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>150</span>
+        <div class="card-desc">
+          <h5>Túnica Kokiri</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Túnica Goron
-        </div>
         <div class="card-body">
           <img src="./assets/img/tunic-goron.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>200</span>
+        <div class="card-desc">
+          <h5>Túnica Goron</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Túnica Zora
-        </div>
         <div class="card-body">
           <img src="./assets/img/tunic-zora.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>200</span>
+        <div class="card-desc">
+          <h5>Túnica Zora</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Botella vacía
-        </div>
         <div class="card-body">
           <img src="./assets/img/bottle.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>75</span>
+        <div class="card-desc">
+          <h5>Botella vacía</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Poción verde
-        </div>
         <div class="card-body">
           <img src="./assets/img/potion-green.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>100</span>
+        <div class="card-desc">
+          <h5>Poción verde</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Poción Roja
-        </div>
         <div class="card-body">
           <img src="./assets/img/potion-red.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>100</span>
+        <div class="card-desc">
+          <h5>Poción roja</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">
-          Poción Azul
-        </div>
         <div class="card-body">
           <img src="./assets/img/potion-blue.png" alt="">
         </div>
-        <div class="card-footer">
-          <img src="./assets/img/rupee.png" alt="" class="precio"> 
-          <span>180</span>
+        <div class="card-desc">
+          <h5>Poción azul</h5>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="card-footer">
+            <div class="precio">
+              <img src="./assets/img/rupee.png" alt="" class="rupias"> 
+              <span>100</span>
+            </div>
+            <button>Añadir</button>
+          </div>
         </div>
       </div>
+
     </main>
+
     <footer>
-      footer xd
+      <p>@KokiriShop</p>
     </footer>
+
   </div>
 </body>
 </html>

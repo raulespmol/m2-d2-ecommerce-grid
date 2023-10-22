@@ -1,10 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   transition: all 300ms ease;
+}
+
+.rupias {
+  height: 25px;
 }
 
 .grid {
@@ -34,11 +39,31 @@
   color: #701000;
   font-size: 50px;
 }
+.grid header .bag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 5px;
+}
 .grid header .bag img {
   height: 60px;
 }
 .grid header .bag img:hover {
   cursor: pointer;
+}
+.grid header .bag .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #701000;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: #FFF;
 }
 .grid menu {
   grid-area: sd;
@@ -60,13 +85,19 @@
 .grid menu .filtros ul {
   list-style-type: none;
 }
+.grid menu .filtros .precio-max {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .grid main {
   grid-area: main;
   background-color: #cfd6bb;
   display: grid;
-  grid-template: repeat(3, 400px)/repeat(4, minmax(250px, 1fr));
-  /* justify-items: stretch;
-  align-items: stretch; */
+  grid-template: repeat(3, 450px)/repeat(4, minmax(250px, 1fr));
+  /* Nota: En la maqueta que nos entregan hay definidas 3 columnas
+  Opté por usar 4 para mejor distribución
+  espero que esto no sea de mayor importancia :)  */
   gap: 1rem;
   padding: 1rem;
 }
@@ -74,17 +105,13 @@
   display: flex;
   flex-direction: column;
   color: white;
+  background-color: #97a54f;
 }
 .grid main .card > * {
   display: flex;
   justify-content: center;
 }
-.grid main .card .card-header {
-  background-color: #701000;
-  padding: 5px;
-}
 .grid main .card .card-body {
-  background-color: #97a54f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,24 +120,57 @@
 }
 .grid main .card .card-body img {
   width: 220px;
-  filter: saturate(0);
+  filter: saturate(0.2);
 }
 .grid main .card .card-body img:hover {
   transform: scale(1.1);
   filter: saturate(1);
   cursor: pointer;
 }
-.grid main .card .card-footer {
-  background-color: #b5d02d;
+.grid main .card .card-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #618734;
+  padding: 10px;
+}
+.grid main .card .card-desc h5 {
+  font-size: 1.5rem;
+}
+.grid main .card .card-desc p {
+  margin-bottom: 10px;
+  font-weight: 300;
+  text-align: center;
+}
+.grid main .card .card-desc .card-footer {
+  width: 100%;
   padding: 5px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
 }
-.grid main .card .card-footer .precio {
-  height: 25px;
+.grid main .card .card-desc .card-footer .precio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+.grid main .card .card-desc .card-footer button {
+  background-color: #701000;
+  border: none;
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.grid main .card .card-desc .card-footer button:hover {
+  cursor: pointer;
+  background-color: #b5d02d;
 }
 .grid footer {
   grid-area: ft;
-  background-color: #97a54f;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #701000;
 }
